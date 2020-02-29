@@ -66,6 +66,7 @@ export default {
   },
   methods: {
     submit() {
+      this.$store.dispatch("clearFavs");
       this.submitted = true;
     }
   }

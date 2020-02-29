@@ -31,6 +31,9 @@ export default new Vuex.Store({
     },
     removeFromFavs(state, payload) {
       state.favs.splice(state.favs.indexOf(payload), 1);
+    },
+    clearFavs(state) {
+      state.favs = [];
     }
   },
   actions: {
@@ -39,6 +42,9 @@ export default new Vuex.Store({
     },
     removeFromFavs({ commit }, payload) {
       commit("removeFromFavs", payload);
+    },
+    clearFavs({ commit }) {
+      commit("clearFavs");
     }
   }
 });
