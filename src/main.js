@@ -5,6 +5,7 @@ import VueRouter from "vue-router";
 
 import Home from "./views/Home";
 import Pets from "./views/Pets";
+import Favourites from "./views/Favourites";
 
 Vue.config.productionTip = false;
 
@@ -18,6 +19,10 @@ const routes = [
   {
     path: "/pets",
     component: Pets
+  },
+  {
+    path: "/favourites",
+    component: Favourites
   }
 ];
 
