@@ -9,6 +9,13 @@
               <v-btn to="/" text>Home</v-btn>
               <v-btn to="/pets" text>Pets</v-btn>
             </v-toolbar-items>
+            <v-spacer></v-spacer>
+            <router-link to="/favs">
+              <v-badge color="grey lighten-1" overlap right v-model="favs.length">
+                <span slot="badge">{{favs.length}}</span>
+                <v-icon large>favorite_border</v-icon>
+              </v-badge>
+            </router-link>
           </v-toolbar>
           <v-btn @click="themeSwitched = !themeSwitched">Switch theme</v-btn>
         </header>
@@ -24,6 +31,11 @@
 <script>
 export default {
   name: "App",
+  computed: {
+    favs() {
+      return this.$store.state.favs;
+    }
+  },
   data() {
     return {
       themeSwitched: false

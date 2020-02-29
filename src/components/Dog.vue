@@ -7,6 +7,9 @@
         <p>{{dog.breed}}</p>
       </div>
     </v-card-title>
+    <v-btn @click="$emit('addToFavs', dog)">
+      <v-icon medium>favorite_border</v-icon>Add to Favorites
+    </v-btn>
   </v-card>
 </template>
 
