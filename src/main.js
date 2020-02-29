@@ -8,6 +8,7 @@ import store from "./store/store";
 import Home from "./views/Home";
 import Pets from "./views/Pets";
 import Favs from "./views/Favs";
+import Form from "./views/Form";
 
 Vue.config.productionTip = false;
 
@@ -25,6 +26,10 @@ const routes = [
   {
     path: "/favs",
     component: Favs
+  },
+  {
+    path: "/form",
+    component: Form
   }
 ];
 
